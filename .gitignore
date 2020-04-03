@@ -1,0 +1,6 @@
+# Client
+client/.cache/
+client/dist/
+client/node_modules/
+
+# Server

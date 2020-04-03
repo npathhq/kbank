@@ -1,6 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/pages/*.html -d dist/development/ --global index --open",
+    "build": "parcel build src/pages/*.html -d dist/production/ --global index --no-source-maps --public-url ./"
+  },
+  "dependencies": {
+    "open-color": "^1.7.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "latest",
+    "sass": "^1.26.3"
   }
 }

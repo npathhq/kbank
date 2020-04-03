@@ -1,0 +1,45 @@
+// ------------------------------------------------------ /
+// Reset
+// ------------------------------------------------------ /
+
+// Imports ---------------------------------------------- /
+@import "~open-color/open-color";
+
+// Base ------------------------------------------------- /
+// Default border box
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Reset spacing
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+// Default height
+html,
+body {
+  height: 100%;
+}
+
+// Font Family ------------------------------------------ /
+body {
+  font-family: Jost, -apple-system, sans-serif;
+}
