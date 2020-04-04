@@ -1,0 +1,63 @@
+// Mixins
+@mixin debug($color) {
+  background-color: rgba($color, 0.1);
+  border: 1px dashed rgba($color, 0.5);
+}
+
+@mixin full {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin position-absolute-bottom($distance) {
+  position: absolute;
+  bottom: $distance;
+}
+
+@mixin transition($property) {
+  transition: $property 0.2s;
+}
+
+@mixin transition-background {
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $np-gray-2;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $np-gray-3;
+  }
+}
+
+@mixin transition-button($color) {
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($color, 8%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($color, 16%);
+  }
+}

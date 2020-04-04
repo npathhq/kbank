@@ -1,2 +1,22 @@
 // Imports
 @import "reset";
+@import "mixens";
+
+body {
+  // @include debug(blue);
+}
+
+.main {
+  @include debug(black);
+  @include full;
+  @include center;
+  flex-direction: column;
+}
+
+.form {
+  @include debug(red);
+  height: 300px;
+  min-width: 400px;
+  padding: 16px;
+  border-radius: 4px;
+}
