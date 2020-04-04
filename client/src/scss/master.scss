@@ -30,16 +30,18 @@
 
   &__label {
     color: $oc-gray-7;
+    font-size: 14px;
     margin-bottom: 8px;
   }
 
   &__input {
     border: 1px solid $oc-gray-3;
     border-radius: 4px;
+    font-size: 12px;
     height: 40px;
     margin-bottom: 16px;
+    outline: none;
     padding-left: 8px;
-    transition: border 200ms;
     width: 100%;
 
     &:focus {
@@ -57,6 +59,10 @@
     height: 48px;
     margin-top: 32px;
     width: 100%;
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
   }
 
   &__container {
@@ -69,14 +75,8 @@
     // @include debug(red);
     @include transition-anchor(rgba($oc-blue-5, 0.32));
     color: $oc-gray-7;
+    font-size: 14px;
+    outline: none;
     text-decoration: none;
   }
-}
-
-input:not(:placeholder-shown) {
-  border-color: hsl(0, 76%, 50%);
-}
-
-input:valid {
-  border-color: hsl(120, 76%, 50%);
 }
