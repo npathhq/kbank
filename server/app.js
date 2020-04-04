@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const bcrypt = require('bcrypt');
 const schema = require('./js/validate');
+const app = express();
 
 
 // Middleware
@@ -12,6 +13,7 @@ console.log();
 
 const courses = [];
 const users = [
+  { email: 'jamesbond@gmail.com', password: '$2b$10$T3sS5pvrb3n1pfUpJfXt6OGHQ.OaN4tQg39sR3hYdIj251nelqYIC' },
   { email: 'johnsmith@gmail.com', password: '123456' },
   { email: 'jonnaquinn@gmail.com', password: 'qwert2' },
   { email: 'bobharpi@gmail.com', password: '49d49526' },
@@ -49,10 +51,12 @@ app.post('/signup', (req, res) => {
     }
   }
 
+  const hashPassword = bcrypt.hashSync(password, 10);
+
   // Add to user to database
   users.push({
     email: email,
-    password: password,
+    password: hashPassword,
   });
 
   // Respond with success message
@@ -62,7 +66,34 @@ app.post('/signup', (req, res) => {
 });
 
 
-app.post('login', (req, res) => {
+app.post('/login', (req, res) => {
+
+  // Validate the request body values
+  const result = schema.login.validate(req.body);
+  if (result.error) {
+    console.log(result.error.details[0].message);
+    res.status(400).send(result.error.details[0].message);
+    return;
+  }
+
+  // Get the hashed password from email
+  const { email, password } = req.body;
+  let hashPassword = '';
+  for (const u of users) {
+    if (u.email === email) {
+      hashPassword = u.password;
+    }
+  }
+
+  // Check whether password is the same database
+  if (bcrypt.compareSync(password, hashPassword)) {
+    console.log('User is authenticated! ✅');
+    res.send('User is authenticated! ✅');
+  } else {
+    console.log('User is not authenticated! ❌');
+    res.send('User is not authenticated! ❌');
+  }
+
 });
 
 const port = process.env.PORT || 3000;
