@@ -11,9 +11,11 @@ app.use(express.json());
 console.log();
 
 
+// Mock database
 const users = [
   { email: 'jamesbond@gmail.com', password: '$2b$10$T3sS5pvrb3n1pfUpJfXt6OGHQ.OaN4tQg39sR3hYdIj251nelqYIC' },
 ];
+
 
 // Routes
 app.get('/', (req, res) => {
