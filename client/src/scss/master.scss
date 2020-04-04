@@ -9,6 +9,7 @@
   @include center;
   background-image: url("https://images.unsplash.com/photo-1582442797897-f73ff3ef825d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80");
   flex-direction: column;
+  min-height: 650px;
 }
 
 .form {
