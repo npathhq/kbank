@@ -29,9 +29,6 @@ npm install
 
 # running the server
 npm run dev
-
-# Go to browser
-http://localhost:1234/index.html
 ```
 
 ### Installing the server
