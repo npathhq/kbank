@@ -61,3 +61,14 @@
     background-color: darken($color, 16%);
   }
 }
+
+@mixin transition-anchor($color) {
+  box-shadow: inset 0px -1px $color;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0px -8px $color;
+  }
+}

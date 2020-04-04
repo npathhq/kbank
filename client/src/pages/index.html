@@ -10,12 +10,18 @@
 </head>
 
 <body>
+
   <main class="main">
     <form class="form">
-      <p>Login</p>
-      Email: <input type="email"><br>
-      Password: <input type="password"><br>
-      <input type="submit" value="Login">
+      <h1 class="form__title">Login</h1>
+      <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" name="email" placeholder="e.g. johnsmith@email.com" spellcheck="false" required>
+      <label class="form__label" for="password">Password</label>
+      <input class="form__input" type="password" name="password" placeholder="Must be at least 6 characters" minlength="6" maxlength="100" required>
+      <input class="form__button" type="submit" value="Login">
+      <div class="form__container">
+        <a class="form__anchor" href="#">Create account instead</a>
+      </div>
     </form>
   </main>
 
