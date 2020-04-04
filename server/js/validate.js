@@ -2,6 +2,14 @@ const Joi = require('@hapi/joi');
 
 // Validate the request body values
 const signup = Joi.object({
+  name: Joi.string()
+    .pattern(new RegExp('^[a-zA-Z ]+$'))
+    .min(2)
+    .max(30),
+  username: Joi.string()
+    .alphanum()
+    .min(6)
+    .max(30),
   email: Joi.string()
     .email()
     .required(),
@@ -19,6 +27,5 @@ const login = Joi.object({
     .pattern(new RegExp('^[a-zA-Z0-9]{6,100}$'))
     .required()
 });
-
 
 module.exports = { signup, login };
