@@ -7,12 +7,13 @@
   <title>KBank - Signup</title>
   <link rel="shortcut icon" href="../../../assets/KBank_icon.png" type="image/x-icon">
   <link rel="stylesheet" href="../scss/master.scss">
+  <script defer src="../js/auth.js"></script>
 </head>
 
 <body>
 
   <main class="main">
-    <form class="form">
+    <form class="form" onSubmit="index.signup()">
       <h1 class="form__title">Signup</h1>
       <label class="form__label" for="name">Name</label>
       <input class="form__input" type="text" name="name" placeholder="e.g. John Smith" spellcheck="false" required>
