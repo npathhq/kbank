@@ -13,9 +13,6 @@ git clone https://github.com/npathapp/kbank.git
 
 # navigate to project
 cd kbank
-
-# navigate to project
-cd client
 ```
 
 ### Installing the client
@@ -43,6 +40,8 @@ npm install
 # running the server
 npm run dev
 ```
+
+**⚠ Make sure you run the server first then the client**
 
 
 ## 💻 Technologies and Tools
