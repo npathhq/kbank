@@ -48,18 +48,24 @@ npm run dev
 
 **Design**
 * [Inkscape](https://inkscape.org/) // Art assets
+* [Figma](https://www.figma.com/) // Interface Design Tool
 
 **Front-end**
 * HTML
 * CSS
+  * [Sass](https://sass-lang.com/)
+* JavaScript
+  * [React](https://reactjs.org/)
 
 **Back-end**
 * [Node.js](https://nodejs.org/en/)
+  * [Express](https://expressjs.com/)
 * [MySQL](https://www.mysql.com/)
 
 **Et Cetera**
 * [GitHub](https://github.com/) // Version Control
-* [Brackets](http://brackets.io/) // IDE
+* [Visual Studio Code](https://code.visualstudio.com/) // Code Editor
+* [Brackets](http://brackets.io/) // Code Editor
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 
