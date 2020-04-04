@@ -6,14 +6,15 @@ const app = express();
 
 
 // Middleware
+console.log();
 app.use(cors());
 app.use(express.json());
-console.log();
+app.use(express.urlencoded());
 
 
 // Mock database
 const users = [
-  { email: 'jamesbond@gmail.com', password: '$2b$10$T3sS5pvrb3n1pfUpJfXt6OGHQ.OaN4tQg39sR3hYdIj251nelqYIC' },
+  { email: 'jamesbond@gmail.com', password: '$2b$10$T3sS5pvrb3n1pfUpJfXt6OGHQ.OaN4tQg39sR3hYdIj251nelqYIC' }
 ];
 
 
@@ -29,7 +30,6 @@ app.get('/users', (req, res) => {
 
 
 app.post('/signup', (req, res) => {
-
   // Validate the request body values
   const result = schema.signup.validate(req.body);
   if (result.error) {
@@ -64,12 +64,10 @@ app.post('/signup', (req, res) => {
   // Respond with success message
   console.log('Signup Successful! ✅');
   res.send('Signup Successful! ✅');
-
 });
 
 
 app.post('/login', (req, res) => {
-
   // Validate the request body values
   const result = schema.login.validate(req.body);
   if (result.error) {
@@ -97,7 +95,6 @@ app.post('/login', (req, res) => {
     console.log('User is not authenticated! ❌');
     res.send('User is not authenticated! ❌');
   }
-
 });
 
 
