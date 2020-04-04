@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "dev": "parcel src/pages/*.html -d dist/development/ --global index --open",
+    "dev": "open-cli http://localhost:1234/index.html && parcel src/pages/*.html -d dist/development/ --global index",
     "build": "parcel build src/pages/*.html -d dist/production/ --global index --no-source-maps --public-url ./"
   },
   "dependencies": {
     "open-color": "^1.7.0"
   },
   "devDependencies": {
+    "open-cli": "^6.0.1",
     "parcel-bundler": "latest",
     "sass": "^1.26.3"
   }
