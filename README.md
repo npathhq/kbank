@@ -2,7 +2,7 @@
   <img src="assets/KBank_logo_01.png" width=500/>
 </p>
 
-🏦 KBank - A web application to teach kids about financial literacy and responsibility
+A web application to teach kids about financial literacy and responsibility
 
 
 ## 🚀 Getting Started
@@ -17,7 +17,6 @@ cd kbank
 # navigate to project
 cd client
 ```
-
 
 ### Installing the client
 
