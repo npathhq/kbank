@@ -4,3 +4,4 @@ client/dist/
 client/node_modules/
 
 # Server
+server/node_modules/
