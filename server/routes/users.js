@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const router = express.Router();
 
@@ -41,7 +43,7 @@ router.post('/signup', async (req, res) => {
   const user = { id, firstName, lastName, username, email, password: hashPassword }
   users.push(user);
 
-  const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+  const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.TOKEN_EXPIRATION });
   res.send({ accessToken });
 });
 
@@ -75,12 +77,29 @@ router.post('/login', async (req, res) => {
 
   // Checks whether password is the same in database
   if (await bcrypt.compare(password, hashPassword)) {
-    const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+    const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.TOKEN_EXPIRATION });
     res.send({ accessToken });
   } else {
     res.status(401).send('Login information is incorrect! ❌');
   }
 });
 
+
+router.post('/authenticate', async (req, res) => {
+  const authHeader = req.headers['authorization'];
+  // console.log('authHeader:', authHeader);
+
+  const token = authHeader && authHeader.split(' ')[1];
+  // console.log('token:', token);
+  if (token == null) return res.sendStatus(401);
+
+
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, id) => {
+    if (err) return res.sendStatus(401);
+    req.id = id;
+    console.log('id:', id);
+    res.send(id);
+  });
+});
 
 module.exports = router;

@@ -18,7 +18,9 @@ const signup = () => {
     .then(response => {
       const { accessToken } = response.data;
       localStorage.setItem('token', accessToken);
-      console.log(accessToken);
+      console.log('accessToken:', accessToken);
+
+      console.log('isAuthenticated:', isAuthenticated());
     })
     .catch(error => console.error(error.response.data));
 
@@ -37,7 +39,7 @@ const login = () => {
     .then(response => {
       const { accessToken } = response.data;
       localStorage.setItem('token', accessToken);
-      console.log(accessToken);
+      console.log('accessToken:', accessToken);
     })
     .catch(error => console.error(error.response.data));
 
@@ -45,11 +47,19 @@ const login = () => {
 }
 
 
-const authenticateUser = () => {
+const isAuthenticated = () => {
   const token = localStorage.getItem('token');
-  const config = { headers: { Authorization: "Bearer " + token } };
-  axios.post('http://localhost:3000/users/authenticate', config);
+  const config = { headers: { Authorization: 'Bearer ' + token } };
+  axios.post('http://localhost:3000/users/authenticate', null, config)
+    .then(response => {
+      console.log(response.data);
+      return true;
+    })
+    .catch(error => {
+      console.error(error.response.data);
+      return false;
+    });
 }
 
 
-module.exports = { login, signup };
+module.exports = { login, signup, isAuthenticated };
