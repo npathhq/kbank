@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const bcrypt = require('bcrypt');
+const uuid = require('uuid');
+const jwt = require('jsonwebtoken');
 const schema = require('../js/validate');
 const users = require('../db/users.json');
 
@@ -32,19 +34,23 @@ router.post('/signup', async (req, res) => {
     }
   }
 
+  const id = uuid.v4();
   const hashPassword = await bcrypt.hash(password, 10);
 
   // Add to user to database
-  users.push({
+  const user = {
+    id: id,
     name: name,
     username: username,
     email: email,
-    password: hashPassword,
-  });
+    password: hashPassword
+  }
+  users.push(user);
 
-  // Respond with success message
-  console.log('Signup Successful! ✅');
-  res.send('Signup Successful! ✅');
+  // JSON Web Tokens
+  const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+
+  res.header('x-auth-token', accessToken).send(user);
 });
 
 
@@ -76,5 +82,6 @@ router.post('/login', async (req, res) => {
     res.send('User is not authenticated! ❌');
   }
 });
+
 
 module.exports = router;
