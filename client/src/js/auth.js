@@ -1,26 +1,20 @@
 import axios from 'axios';
 
 
-console.log('auth.js is loaded...');
-
-
 const signup = () => {
-  const name = document.getElementsByName('name')[0].value;
+  const firstName = document.getElementsByName('firstName')[0].value;
+  const lastName = document.getElementsByName('lastName')[0].value;
   const username = document.getElementsByName('username')[0].value;
   const email = document.getElementsByName('email')[0].value;
   const password = document.getElementsByName('password')[0].value;
 
-  console.log('name:', name);
+  console.log('firstName:', firstName);
+  console.log('lastName:', lastName);
   console.log('username:', username);
   console.log('email:', email);
   console.log('password:', password);
 
-  axios.post('http://localhost:3000/signup', {
-    name: name,
-    username: username,
-    email: email,
-    password: password
-  })
+  axios.post('http://localhost:3000/users/signup', { firstName, lastName, username, email, password })
     .then(response => console.log(response.data))
     .catch(error => console.log(error.response.data));
 
@@ -35,10 +29,7 @@ const login = () => {
   console.log('email:', email);
   console.log('password:', password);
 
-  axios.post('http://localhost:3000/login', {
-    email: email,
-    password: password
-  })
+  axios.post('http://localhost:3000/users/login', { email, password })
     .then(response => console.log(response.data))
     .catch(error => console.log(error.response.data));
 

@@ -15,8 +15,10 @@
   <main class="main">
     <form class="form" onSubmit="index.signup()">
       <h1 class="form__title">Signup</h1>
-      <label class="form__label" for="name">Name</label>
-      <input class="form__input" type="text" name="name" placeholder="e.g. John Smith" spellcheck="false" required>
+      <label class="form__label" for="firstName"> First Name</label>
+      <input class="form__input" type="text" name="firstName" placeholder="e.g. John" spellcheck="false" required>
+      <label class="form__label" for="lastName">Last Name</label>
+      <input class="form__input" type="text" name="lastName" placeholder="e.g. Smith" spellcheck="false" required>
       <label class="form__label" for="username">Username</label>
       <input class="form__input" type="text" name="username" placeholder="e.g. applejacks55" spellcheck="false" pattern="[0-9a-zA-Z-_]+" title="The username can contain English letters (capitalized or not), digits, and the characters '_' (underscore) and '-' (dash)" required>
       <label class="form__label" for="email">Email</label>
