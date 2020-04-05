@@ -20,7 +20,7 @@ const signup = () => {
       localStorage.setItem('token', accessToken);
       console.log('accessToken:', accessToken);
 
-      console.log('isAuthenticated:', isAuthenticated());
+      // console.log('isAuthenticated:', isAuthenticated());
     })
     .catch(error => console.error(error.response.data));
 
@@ -62,4 +62,10 @@ const isAuthenticated = () => {
 }
 
 
-module.exports = { login, signup, isAuthenticated };
+const logout = () => {
+  localStorage.removeItem('token');
+  // Redirect to another page
+}
+
+
+module.exports = { login, signup, isAuthenticated, logout };
