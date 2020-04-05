@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/signup', (req, res) => {
+router.post('/signup', async (req, res) => {
   // Validate the request body values
   const { error } = schema.signup.validate(req.body);
   if (error) {
@@ -21,7 +21,6 @@ router.post('/signup', (req, res) => {
     return;
   }
 
-  // Destructure the request body object
   const { name, username, email, password } = req.body;
 
   // Check whether email already exist
@@ -33,8 +32,7 @@ router.post('/signup', (req, res) => {
     }
   }
 
-  // Encrypt the password
-  const hashPassword = bcrypt.hashSync(password, 10);
+  const hashPassword = await bcrypt.hash(password, 10);
 
   // Add to user to database
   users.push({
@@ -50,7 +48,7 @@ router.post('/signup', (req, res) => {
 });
 
 
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
   // Validate the request body values
   const { error } = schema.login.validate(req.body);
   if (error) {
@@ -59,7 +57,6 @@ router.post('/login', (req, res) => {
     return;
   }
 
-  // Destructure the request body object
   const { email, password } = req.body;
 
   // Get the hashed password from database
@@ -71,7 +68,7 @@ router.post('/login', (req, res) => {
   }
 
   // Check whether password is the same in database
-  if (bcrypt.compareSync(password, hashPassword)) {
+  if (await bcrypt.compare(password, hashPassword)) {
     console.log('User is authenticated! ✅');
     res.send('User is authenticated! ✅');
   } else {
