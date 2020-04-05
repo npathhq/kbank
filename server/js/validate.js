@@ -2,14 +2,21 @@ const Joi = require('@hapi/joi');
 
 // Validate the request body values
 const signup = Joi.object({
-  name: Joi.string()
-    .pattern(new RegExp('^[a-zA-Z ]+$'))
+  firstName: Joi.string()
+    .pattern(new RegExp('^[a-zA-Z]+$'))
     .min(2)
-    .max(30),
+    .max(30)
+    .required(),
+  lastName: Joi.string()
+    .pattern(new RegExp('^[a-zA-Z]+$'))
+    .min(2)
+    .max(30)
+    .required(),
   username: Joi.string()
     .alphanum()
     .min(6)
-    .max(30),
+    .max(30)
+    .required(),
   email: Joi.string()
     .email()
     .required(),
