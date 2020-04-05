@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 
 router.post('/signup', async (req, res) => {
-  // Validate the request body values
+  // Validates the request body values
   const { error } = schema.signup.validate(req.body);
   if (error) {
     console.log(error.details[0].message);
@@ -23,9 +23,9 @@ router.post('/signup', async (req, res) => {
     return;
   }
 
-  const { name, username, email, password } = req.body;
+  const { firstName, lastName, username, email, password } = req.body;
 
-  // Check whether email already exist
+  // Checks whether email already exist
   for (const u of users) {
     if (u.email === email) {
       console.log('Email already exist! ❌');
@@ -37,25 +37,17 @@ router.post('/signup', async (req, res) => {
   const id = uuid.v4();
   const hashPassword = await bcrypt.hash(password, 10);
 
-  // Add to user to database
-  const user = {
-    id: id,
-    name: name,
-    username: username,
-    email: email,
-    password: hashPassword
-  }
+  // Adds to user to database
+  const user = { id, firstName, lastName, username, email, password: hashPassword }
   users.push(user);
 
-  // JSON Web Tokens
   const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
-
-  res.header('x-auth-token', accessToken).send(user);
+  res.send({ accessToken });
 });
 
 
 router.post('/login', async (req, res) => {
-  // Validate the request body values
+  // Validates the request body values
   const { error } = schema.login.validate(req.body);
   if (error) {
     console.log(error.details[0].message);
@@ -65,21 +57,28 @@ router.post('/login', async (req, res) => {
 
   const { email, password } = req.body;
 
-  // Get the hashed password from database
+  // Gets the hashed password from database
+  let id = '';
   let hashPassword = '';
-  for (const u of users) {
-    if (u.email === email) {
-      hashPassword = u.password;
+  for (const user of users) {
+    if (user.email === email) {
+      id = user.id;
+      hashPassword = user.password;
     }
   }
 
-  // Check whether password is the same in database
+  // Checks whether user exist with the email
+  if (id === '') {
+    res.status(401).send('User does not exist with that email! ❌');
+    return;
+  }
+
+  // Checks whether password is the same in database
   if (await bcrypt.compare(password, hashPassword)) {
-    console.log('User is authenticated! ✅');
-    res.send('User is authenticated! ✅');
+    const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+    res.send({ accessToken });
   } else {
-    console.log('User is not authenticated! ❌');
-    res.send('User is not authenticated! ❌');
+    res.status(401).send('Login information is incorrect! ❌');
   }
 });
 
