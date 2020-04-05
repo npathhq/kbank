@@ -43,7 +43,8 @@ router.post('/signup', async (req, res) => {
   const user = { id, firstName, lastName, username, email, password: hashPassword }
   users.push(user);
 
-  const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.TOKEN_EXPIRATION });
+  const expiresIn = process.env.TOKEN_EXPIRATION;
+  const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn });
   res.send({ accessToken });
 });
 
@@ -77,7 +78,8 @@ router.post('/login', async (req, res) => {
 
   // Checks whether password is the same in database
   if (await bcrypt.compare(password, hashPassword)) {
-    const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.TOKEN_EXPIRATION });
+    const expiresIn = process.env.TOKEN_EXPIRATION;
+    const accessToken = jwt.sign({ id }, process.env.ACCESS_TOKEN_SECRET, expiresIn);
     res.send({ accessToken });
   } else {
     res.status(401).send('Login information is incorrect! ❌');
