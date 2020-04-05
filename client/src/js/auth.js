@@ -15,8 +15,12 @@ const signup = () => {
   console.log('password:', password);
 
   axios.post('http://localhost:3000/users/signup', { firstName, lastName, username, email, password })
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error.response.data));
+    .then(response => {
+      const { accessToken } = response.data;
+      localStorage.setItem('token', accessToken);
+      console.log(accessToken);
+    })
+    .catch(error => console.error(error.response.data));
 
   event.preventDefault();
 }
@@ -30,10 +34,21 @@ const login = () => {
   console.log('password:', password);
 
   axios.post('http://localhost:3000/users/login', { email, password })
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error.response.data));
+    .then(response => {
+      const { accessToken } = response.data;
+      localStorage.setItem('token', accessToken);
+      console.log(accessToken);
+    })
+    .catch(error => console.error(error.response.data));
 
   event.preventDefault();
+}
+
+
+const authenticateUser = () => {
+  const token = localStorage.getItem('token');
+  const config = { headers: { Authorization: "Bearer " + token } };
+  axios.post('http://localhost:3000/users/authenticate', config);
 }
 
 
