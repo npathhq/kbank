@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "open-cli http://localhost:1234/index.html && parcel src/pages/*.html -d dist/development/ --global index",
+    "dev": "open-cli http://localhost:1234/login.html && parcel src/pages/*.html -d dist/development/ --global index",
     "build": "parcel build src/pages/*.html -d dist/production/ --global index --no-source-maps --public-url ./"
   },
   "dependencies": {
