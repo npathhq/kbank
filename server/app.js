@@ -14,12 +14,12 @@ console.log();
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
-if (app.get('env') === 'development') app.use(morgan('tiny'));
+if (app.get('env') === 'development') app.use(morgan('dev'));
 
 
 // Routes
-app.use('/users', users);
 app.use('/', home);
+app.use('/users', users);
 
 
 const port = process.env.PORT || 3000;

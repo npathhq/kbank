@@ -9,7 +9,6 @@ const jwt = require('jsonwebtoken');
 const schema = require('../js/validate');
 const users = require('../db/users.json');
 
-
 // Routes
 router.get('/', (req, res) => {
   res.send(users);
@@ -21,18 +20,16 @@ router.post('/signup', async (req, res) => {
   const { error } = schema.signup.validate(req.body);
   if (error) {
     console.log(error.details[0].message);
-    res.status(400).send(error.details[0].message);
-    return;
+    return res.status(400).send(error.details[0].message);
   }
 
   const { firstName, lastName, username, email, password } = req.body;
 
   // Checks whether email already exist
-  for (const u of users) {
-    if (u.email === email) {
+  for (const user of users) {
+    if (user.email === email) {
       console.log('Email already exist! ❌');
-      res.status(400).send('Email already exist! ❌');
-      return;
+      return res.status(400).send('Email already exist! ❌');
     }
   }
 
@@ -89,18 +86,14 @@ router.post('/login', async (req, res) => {
 
 router.post('/authenticate', async (req, res) => {
   const authHeader = req.headers['authorization'];
-  // console.log('authHeader:', authHeader);
-
   const token = authHeader && authHeader.split(' ')[1];
-  // console.log('token:', token);
   if (token == null) return res.sendStatus(401);
-
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, id) => {
     if (err) return res.sendStatus(401);
     req.id = id;
     console.log('id:', id);
-    res.send(id);
+    res.sendStatus(200);
   });
 });
 
