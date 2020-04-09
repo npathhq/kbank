@@ -84,8 +84,8 @@ router.post('/login', async (req, res) => {
 });
 
 
-router.post('/authenticate', async (req, res) => {
-  const authHeader = req.headers['authorization'];
+router.post('/authenticate', (req, res) => {
+  const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(' ')[1];
   if (token == null) return res.sendStatus(401);
 
