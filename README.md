@@ -24,8 +24,8 @@ cd client
 # installing the project
 npm install
 
-# running the server
-npm run dev
+# running the project
+npm start
 ```
 
 ### Installing the server
@@ -40,8 +40,6 @@ npm install
 # running the server
 npm run dev
 ```
-
-**⚠ Make sure you run the server first then the client**
 
 
 ## 💻 Technologies and Tools

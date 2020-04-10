@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm:client\" \"npm:server\"",
+    "start": "concurrently \"npm:client\" \"npm:server\"",
     "client": "open-cli http://localhost:1234/login.html && parcel src/pages/*.html -d dist/development/ --global index",
     "client:build": "parcel build src/pages/*.html -d dist/production/ --global index --no-source-maps --public-url ./",
     "server": "npm run dev --prefix ../server"
