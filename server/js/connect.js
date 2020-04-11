@@ -34,6 +34,8 @@ const main = async () => {
     // Gets the list of users
     const users = await pool.query('SELECT * FROM users');
     console.table(users.rows);
+
+    await pool.end();
   } catch (err) {
     console.log(err.stack);
   }
