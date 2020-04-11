@@ -3,8 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 
-const bcrypt = require('bcrypt');
 const uuid = require('uuid');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const schema = require('../js/validate');
 const users = require('../db/users.json');
