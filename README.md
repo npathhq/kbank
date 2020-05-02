@@ -45,8 +45,8 @@ npm run dev
 ## 💻 Technologies and Tools
 
 **Design**
-* [Inkscape](https://inkscape.org/) // Art assets
 * [Figma](https://www.figma.com/) // Interface Design Tool
+* [Inkscape](https://inkscape.org/) // Art assets
 
 **Front-end**
 * HTML
@@ -63,8 +63,6 @@ npm run dev
 **Et Cetera**
 * [GitHub](https://github.com/) // Version Control
 * [Visual Studio Code](https://code.visualstudio.com/) // Code Editor
-* [Brackets](http://brackets.io/) // Code Editor
-* [MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 
 ## 📄 License
