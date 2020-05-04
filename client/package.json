@@ -16,6 +16,7 @@
     "concurrently": "latest",
     "open-cli": "latest",
     "parcel-bundler": "latest",
+    "parcel-plugin-inliner": "^1.0.14",
     "rimraf": "latest",
     "sass": "latest"
   }
