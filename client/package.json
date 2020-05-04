@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "concurrently": "^5.1.0",
     "open-color": "^1.7.0"
   },
   "devDependencies": {
+    "concurrently": "latest",
     "open-cli": "latest",
     "parcel-bundler": "latest",
     "rimraf": "latest",
