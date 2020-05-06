@@ -8,7 +8,7 @@
 ## 📖 Table of Contents
 
 * [📢 About](#📢-about)
-* [🎯 Introduction](#🎯-introduction)
+* [💡 Introduction](#💡-introduction)
 * [📷 Screenshots](#📷-screenshots)
   * [Login page](#login-page)
   * [Signup page](#signup-page)
@@ -19,7 +19,7 @@
   * [Running both](#running-both)
 * [💻 Technologies](#💻-technologies)
 * [📄 License](#📄-license)
-* [😉 Acknowledgement](#😉-acknowledgement)
+* [🎩 Acknowledgement](#🎩-acknowledgement)
 
 
 ## 📢 About
@@ -29,7 +29,7 @@
 * **Team Members:** Jasmine Mai, Nhat Nguyen, and Albert Ong
 
 
-## 🎯 Introduction
+## 💡 Introduction
 
 Many parents give their children an allowance. Some parents give weekly or monthly allowance for free. Or, if they make their children do chores to earn allowance, they sometimes lose track of what’s been completed and how much the children earned. With KBank (kids bank), parents can add available chores. Parents will set the allowance reward for each one.
 
@@ -138,6 +138,6 @@ npm start
 All parts of this project are free to use and abuse under the open-source [MIT license](./LICENSE).
 
 
-## 😉 Acknowledgement
+## 🎩 Acknowledgement
 
 Written by [Jasmine Mai](https://github.com/jasminemai97), [Nhat Nguyen](https://github.com/nguyen-nhat), and [Albert Ong](https://github.com/Albert-C-Ong).
