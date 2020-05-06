@@ -12,11 +12,11 @@ const signup = Joi.object({
     .min(2)
     .max(30)
     .required(),
-  username: Joi.string()
-    .alphanum()
-    .min(6)
-    .max(30)
-    .required(),
+  // username: Joi.string()
+  //   .alphanum()
+  //   .min(6)
+  //   .max(30)
+  //   .required(),
   email: Joi.string()
     .email()
     .required(),
