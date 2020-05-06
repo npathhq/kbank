@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "npm run dev"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",

@@ -1,18 +1,20 @@
 [
   {
     "id": "7f38276e-a6ee-4175-a5b1-97c2b6b010f9",
-    "firstName": "James",
-    "lastName": "Bond",
-    "username": "jamesbond",
+    "name": "James Bond",
     "email": "jamesbond@gmail.com",
     "password": "$2b$10$DTqxaTfDRcS5Vsh5qYX8QOFvMJIBc7OdImNj7z8v51lGRbJDPDeyu"
   },
   {
     "id": "7237ee2a-f8f5-4908-9f9b-eb33aa56b353",
-    "firstName": "Anna",
-    "lastName": "Frost",
-    "username": "annafrost",
+    "name": "Anna Frost",
     "email": "annafrost@gmail.com",
     "password": "$2b$10$6tOocM7biqPzSEd4Bu25EO8ELUov8tOwWrXU9U0brSjiyimDrTuuu"
+  },
+  {
+    "id": "cdbfc3cb-5458-450a-bbbe-7783b4db633d",
+    "name": "John Smith",
+    "email": "johnsmith@gmail.com",
+    "password": "$2b$10$lKCeAXzVM09UVSG4cSs4WOX.R9ol2pwXH9kcKjkEzmcHHH3UZcNuS"
   }
 ]

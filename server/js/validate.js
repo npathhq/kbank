@@ -7,16 +7,6 @@ const signup = Joi.object({
     .min(2)
     .max(255)
     .required(),
-  // lastName: Joi.string()
-  //   .pattern(new RegExp('^[a-zA-Z]+$'))
-  //   .min(2)
-  //   .max(30)
-  //   .required(),
-  // username: Joi.string()
-  //   .alphanum()
-  //   .min(6)
-  //   .max(30)
-  //   .required(),
   email: Joi.string()
     .email()
     .required(),
@@ -35,4 +25,19 @@ const login = Joi.object({
     .required()
 });
 
-module.exports = { signup, login };
+
+// Middleware
+// Validates the request body values
+const validateSignup = (req, res, next) => {
+  const { error } = signup.validate(req.body);
+  if (error) res.status(400).send(error.details[0].message);
+  next();
+}
+
+const validateLogin = (req, res, next) => {
+  const { error } = login.validate(req.body);
+  if (error) res.status(400).send(error.details[0].message);
+  next();
+}
+
+module.exports = { validateSignup, validateLogin };
