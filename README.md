@@ -2,24 +2,24 @@
 
 # KBank &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/npathapp/kbank/pulls)
 
-`KBank` is a web application to teach kids about financial literacy and responsibility.
+`KBank` is a simple web application to teach kids about financial literacy and responsibility.
 
 
 ## 📖 Table of Contents
 
-* [📢 About](#📢-about)
-* [💡 Introduction](#💡-introduction)
-* [📷 Screenshots](#📷-screenshots)
+* [📢 About](#-about)
+* [💡 Introduction](#-introduction)
+* [📷 Screenshots](#-screenshots)
   * [Login page](#login-page)
   * [Signup page](#signup-page)
-* [🚀 Getting Started](#🚀-getting-started)
+* [🚀 Getting Started](#-getting-started)
   * [Cloning the project](#cloning-the-project)
   * [Running the client](#running-the-client)
   * [Running the server](#running-the-server)
   * [Running both](#running-both)
-* [💻 Technologies](#💻-technologies)
-* [📄 License](#📄-license)
-* [🎩 Acknowledgement](#🎩-acknowledgement)
+* [💻 Technologies](#-technologies)
+* [📄 License](#-license)
+* [🎩 Acknowledgement](#-acknowledgement)
 
 
 ## 📢 About
