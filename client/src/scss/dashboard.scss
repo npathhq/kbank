@@ -34,6 +34,7 @@ body {
   @include center;
   margin-top: 64px;
   flex-direction: column;
+  padding: 0 16px;
 
   &__top {
     background-color: #ffffff;
@@ -54,7 +55,6 @@ body {
     flex-direction: column;
     padding: 140px 0 100px;
     width: 100%;
-    margin: 0 16px;
     max-width: $max-width;
     position: relative;
   }
@@ -94,13 +94,14 @@ body {
 .collection {
   // @include debug(red);
   @include center;
+  padding: 0 16px;
 
   &__wrapper {
     // @include debug(blue);
     @include center;
     flex-direction: column;
     width: 100%;
-    margin: 0 16px;
+    // margin: 0 16px;
     max-width: $max-width;
   }
 }
@@ -148,6 +149,7 @@ body {
   &__label {
     font-size: 64px;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   &__bottom {
