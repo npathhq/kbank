@@ -39,6 +39,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Font Family ------------------------------------------ /
 body {
   font-family: Jost, -apple-system, sans-serif;

@@ -4,11 +4,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KBank - Dashboard</title>
+
+  <!-- Primary Meta Tags -->
+  <title>KBank — Finance and Teach Your Kids</title>
+  <meta name="title" content="KBank — Finance and Teach Your Kids">
+  <meta name="description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kbank.now.sh">
+  <meta property="og:title" content="KBank — Finance and Teach Your Kids">
+  <meta property="og:description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/npathapp/kbank/master/design/meta-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kbank.now.sh">
+  <meta property="twitter:title" content="KBank — Finance and Teach Your Kids">
+  <meta property="twitter:description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/npathapp/kbank/master/design/meta-image.png">
+
+  <!-- Base -->
+  <link rel="shortcut icon" href="../resources/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../scss/master.scss">
+  <link rel="stylesheet" href="../scss/dashboard.scss">
 </head>
 
 <body>
-  <p>Dashboard Page</p>
+  <header class="navbar">
+    <img src="../resources/images/favicon.png" alt="KBank Logo">
+  </header>
+
+  <div class="amount">
+    <div class="amount__wrapper">
+      <div class="amount__top">
+        <p>Welcome to KBank!</p>
+      </div>
+      <p class="amount__label">Child's balance</p>
+      <p class="amount__value">$12.00</p>
+    </div>
+  </div>
+
+
+  <div class="collection">
+    <div class="collection__wrapper">
+
+      <div class="transaction">
+
+        <p>Recent transaction</p>
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <img src="../resources/images/icon-info.svg" alt="Info icon">
+          <img src="../resources/images/icon-more.svg" alt="More icon">
+        </div>
+        <div class="card__middle">
+          <div class="card__label">Throw out garbage</div>
+          <div class="card__amount">$3.00</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__created"><b>Created: </b>May 1, 2020</div>
+          <div class="card__due"><b>Due: </b>May 7, 2020</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <img src="../resources/images/icon-info.svg" alt="Info icon">
+          <img src="../resources/images/icon-more.svg" alt="More icon">
+        </div>
+        <div class="card__middle">
+          <div class="card__label">Clean your room</div>
+          <div class="card__amount">$4.00</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__created"><b>Created: </b>May 1, 2020</div>
+          <div class="card__due"><b>Due: </b>May 7, 2020</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <img src="../resources/images/icon-info.svg" alt="Info icon">
+          <img src="../resources/images/icon-more.svg" alt="More icon">
+        </div>
+        <div class="card__middle">
+          <div class="card__label">Wash dishes</div>
+          <div class="card__amount">$5.00</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__created"><b>Created: </b>May 1, 2020</div>
+          <div class="card__due"><b>Due: </b>May 7, 2020</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <header class="navbar navbar--footer">
+    <img src="../resources/images/favicon.png" alt="KBank Logo">
+  </header>
+
+  <a class="up" href="#">&#8593;</a>
+
 </body>
 
 </html>

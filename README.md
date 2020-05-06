@@ -38,11 +38,14 @@ The children will look at the list and choose which ones they want to do. If the
 
 ## 📷 Screenshots
 
+### Dashboard page
+[![KBank Dashboard Page](./design/screenshot_dashboard.png)](https://kbank.now.sh/dashboard.html)
+
 ### Signup page
-[![KBank Signup Page](./design/screenshot_signup.png)](https://kbank.now.sh/)
+[![KBank Signup Page](./design/screenshot_signup.png)](https://kbank.now.sh/signup.html)
 
 ### Login page
-[![KBank Login Page](./design/screenshot_login.png)](https://kbank.now.sh/)
+[![KBank Login Page](./design/screenshot_login.png)](https://kbank.now.sh/login.html)
 
 
 ## 🚀 Getting Started
