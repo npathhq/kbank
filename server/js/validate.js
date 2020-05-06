@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi');
 
-// Validate the request body values
+
+// Validation schemas
 const signup = Joi.object({
   name: Joi.string()
     .pattern(new RegExp('^[a-zA-Z ]+$'))
@@ -15,7 +16,6 @@ const signup = Joi.object({
     .required()
 });
 
-// Validate the request body values
 const login = Joi.object({
   email: Joi.string()
     .email()
@@ -26,8 +26,7 @@ const login = Joi.object({
 });
 
 
-// Middleware
-// Validates the request body values
+// Middleware for validating the request body values
 const validateSignup = (req, res, next) => {
   const { error } = signup.validate(req.body);
   if (error) res.status(400).send(error.details[0].message);
@@ -39,5 +38,6 @@ const validateLogin = (req, res, next) => {
   if (error) res.status(400).send(error.details[0].message);
   next();
 }
+
 
 module.exports = { validateSignup, validateLogin };
