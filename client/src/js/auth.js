@@ -11,15 +11,17 @@ const signup = () => {
   console.log('email:', email);
   console.log('password:', password);
 
-  axios.post('http://localhost:3000/users/signup', { name, email, password })
+  axios.post('https://kbank-backend.now.sh/users/signup', { name, email, password })
     .then(response => {
       const { accessToken } = response.data;
       localStorage.setItem('token', accessToken);
-      console.log('accessToken:', accessToken);
-
-      // console.log('isAuthenticated:', isAuthenticated());
+      alert('You have successfully made an account! ✔');
+      window.location.pathname = 'login.html';
     })
-    .catch(error => console.error(error.response.data));
+    .catch(error => {
+      console.error(error.response.data);
+      alert(error.response.data);
+    });
 
   event.preventDefault();
 }
@@ -33,37 +35,31 @@ const login = () => {
   console.log('email:', email);
   console.log('password:', password);
 
-  axios.post('http://localhost:3000/users/login', { email, password })
+  axios.post('https://kbank-backend.now.sh/users/login', { email, password })
     .then(response => {
       const { accessToken } = response.data;
       localStorage.setItem('token', accessToken);
-      console.log('accessToken:', accessToken);
+      alert('You are successfully logged in! ✔');
+      window.location.pathname = 'dashboard.html';
     })
-    .catch(error => console.error(error.response.data));
+    .catch(error => {
+      console.error(error.response.data);
+      alert(error.response.data);
+    });
 
   event.preventDefault();
 }
 
 
-const isAuthenticated = () => {
-  const token = localStorage.getItem('token');
-  const config = { headers: { Authorization: 'Bearer ' + token } };
-  axios.post('http://localhost:3000/users/authenticate', null, config)
-    .then(response => {
-      console.log(response.data);
-      return true;
-    })
-    .catch(error => {
-      console.error(error.response.data);
-      return false;
-    });
-}
-
-
+// Logout of application
 const logout = () => {
   localStorage.removeItem('token');
-  // Redirect to another page
 }
 
+let isDashboardPage = window.location.pathname === '/dashboard.html' || window.location.pathname === '/dashboard';
+if (isDashboardPage && !localStorage.getItem('token')) {
+  alert('You are not authenticated! ❌');
+  window.location.pathname = 'login.html';
+}
 
-module.exports = { login, signup, isAuthenticated, logout };
+module.exports = { login, signup, logout };
