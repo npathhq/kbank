@@ -115,15 +115,19 @@ npm start
   * [Sass](https://sass-lang.com/) // CSS Preprocessor
 * JavaScript
   * [React](https://reactjs.org/) // JavaScript Library
+  * [axios](https://github.com/axios/axios) // HTTP Client
 * [Parcel](https://parceljs.org/) // Web Application Bundler
+  * [parcel-plugin-inliner](https://github.com/shff/parcel-plugin-inliner) // Inline CSS and JS in HTML
 
 **Backend**
 * [Node](https://nodejs.org/en/)
   * [Express](https://expressjs.com/) // Node framework
-* [Postgres](https://www.postgresql.org/)
-  * [Amazon RDS](https://aws.amazon.com/rds/) // Distributed Relational Database Service
+* [Postgres](https://www.postgresql.org/) // Advanced Open Source Database
+* [Docker](https://www.docker.com/) // Containers
 
 **DevOps**
+* [Amazon RDS](https://aws.amazon.com/rds/) // Distributed Relational Database Service
+* [Amazon ECS](https://aws.amazon.com/ecs/) // Container Orchestration Service
 * [Git](https://git-scm.com/) // Distributed Version Control System
   * [GitHub](https://github.com/) // Git Repository Hosting Service
 * [Visual Studio Code](https://code.visualstudio.com/) // Code Editor
