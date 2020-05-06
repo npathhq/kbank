@@ -16,7 +16,7 @@
   * [Cloning the project](#cloning-the-project)
   * [Installing the client](#installing-the-client)
   * [Installing the server](#installing-the-server)
-* [💻 Technologies and Tools](#💻-technologies-and-tools)
+* [💻 Technologies](#💻-technologies)
 * [📄 License](#📄-license)
 * [😉 Acknowledgement](#😉-acknowledgement)
 
@@ -83,26 +83,29 @@ npm run dev
 ```
 
 
-## 💻 Technologies and Tools
+## 💻 Technologies
 
 **Design**
 * [Figma](https://www.figma.com/) // Interface Design Tool
-* [Inkscape](https://inkscape.org/) // Art assets
+* [Inkscape](https://inkscape.org/) // Vector Graphics Tool
 
-**Front-end**
+**Frontend**
 * HTML
 * CSS
-  * [Sass](https://sass-lang.com/)
+  * [Sass](https://sass-lang.com/) // CSS Preprocessor
 * JavaScript
-  * [React](https://reactjs.org/)
+  * [React](https://reactjs.org/) // JavaScript Library
+* [Parcel](https://parceljs.org/) // Web Application Bundler
 
-**Back-end**
-* [Node.js](https://nodejs.org/en/)
-  * [Express](https://expressjs.com/)
-* [MySQL](https://www.mysql.com/)
+**Backend**
+* [Node](https://nodejs.org/en/)
+  * [Express](https://expressjs.com/) // Node framework
+* [Postgres](https://www.postgresql.org/)
+  * [Amazon RDS](https://aws.amazon.com/rds/) // Distributed Relational Database Service
 
-**Et Cetera**
-* [GitHub](https://github.com/) // Version Control
+**DevOps**
+* [Git](https://git-scm.com/) // Distributed Version Control System
+  * [GitHub](https://github.com/) // Git Repository Hosting Service
 * [Visual Studio Code](https://code.visualstudio.com/) // Code Editor
 
 
