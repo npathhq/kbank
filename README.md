@@ -10,6 +10,7 @@
 * [📢 About](#-about)
 * [💡 Introduction](#-introduction)
 * [📷 Screenshots](#-screenshots)
+  * [Dashboard page](#dashboard-page)
   * [Login page](#login-page)
   * [Signup page](#signup-page)
 * [🚀 Getting Started](#-getting-started)
@@ -39,13 +40,13 @@ The children will look at the list and choose which ones they want to do. If the
 ## 📷 Screenshots
 
 ### Dashboard page
-[![KBank Dashboard Page](./design/screenshot_dashboard.png)](https://kbank.now.sh/dashboard.html)
+[![KBank Dashboard Page](./design/screenshot_dashboard.png)](https://kbank.now.sh/dashboard)
 
 ### Signup page
-[![KBank Signup Page](./design/screenshot_signup.png)](https://kbank.now.sh/signup.html)
+[![KBank Signup Page](./design/screenshot_signup.png)](https://kbank.now.sh/signup)
 
 ### Login page
-[![KBank Login Page](./design/screenshot_login.png)](https://kbank.now.sh/login.html)
+[![KBank Login Page](./design/screenshot_login.png)](https://kbank.now.sh/login)
 
 
 ## 🚀 Getting Started
