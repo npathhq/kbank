@@ -5,6 +5,22 @@
 `KBank` is a web application to teach kids about financial literacy and responsibility.
 
 
+## 📖 Table of Contents
+
+* [📢 About](#📢-about)
+* [🎯 Introduction](#🎯-introduction)
+* [📷 Screenshots](#📷-screenshots)
+  * [Login page](#login-page)
+  * [Signup page](#signup-page)
+* [🚀 Getting Started](#🚀-getting-started)
+  * [Cloning the project](#cloning-the-project)
+  * [Installing the client](#installing-the-client)
+  * [Installing the server](#installing-the-server)
+* [💻 Technologies and Tools](#💻-technologies-and-tools)
+* [📄 License](#📄-license)
+* [😉 Acknowledgement](#😉-acknowledgement)
+
+
 ## 📢 About
 
 * **University:** San Jose State University
@@ -21,8 +37,16 @@ The children will look at the list and choose which ones they want to do. If the
 
 ## 📷 Screenshots
 
+### Signup page
+[![KBank Signup Page](./design/screenshot_signup.png)](https://kbank.now.sh/)
+
+### Login page
+[![KBank Login Page](./design/screenshot_login.png)](https://kbank.now.sh/)
+
 
 ## 🚀 Getting Started
+
+### Cloning the project
 
 ```bash
 # clone project
