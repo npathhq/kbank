@@ -62,4 +62,6 @@ if (isDashboardPage && !localStorage.getItem('token')) {
   window.location.pathname = 'login.html';
 }
 
+if (!isDashboardPage && localStorage.getItem('token')) window.location.pathname = 'dashboard.html';
+
 module.exports = { login, signup, logout };
