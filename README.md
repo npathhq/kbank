@@ -1,9 +1,8 @@
-<p align="center">
-  <img src="assets/KBank_logo_01.png" width=500/>
-</p>
+[![KBank](./design/kbank_github_banner.png)](https://kbank.now.sh/)
 
-A web application to teach kids about financial literacy and responsibility
+# KBank
 
+`KBank` is a web application to teach kids about financial literacy and responsibility
 
 ## 🚀 Getting Started
 
