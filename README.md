@@ -14,8 +14,9 @@
   * [Signup page](#signup-page)
 * [🚀 Getting Started](#🚀-getting-started)
   * [Cloning the project](#cloning-the-project)
-  * [Installing the client](#installing-the-client)
-  * [Installing the server](#installing-the-server)
+  * [Running the client](#running-the-client)
+  * [Running the server](#running-the-server)
+  * [Running both](#running-both)
 * [💻 Technologies](#💻-technologies)
 * [📄 License](#📄-license)
 * [😉 Acknowledgement](#😉-acknowledgement)
@@ -56,30 +57,49 @@ git clone https://github.com/npathapp/kbank.git
 cd kbank
 ```
 
-### Installing the client
+### Running the client
 
 ```bash
-# navigate to project
+# navigate to client
 cd client
 
-# installing the project
+# installing the client
 npm install
 
-# running the project
-npm start
+# running the client
+npm run dev
 ```
 
-### Installing the server
+### Running the server
 
 ```bash
-# navigate to project
+# navigate to server
 cd server
 
-# installing the project
+# installing the server
 npm install
 
 # running the server
 npm run dev
+```
+
+### Running both
+
+```bash
+# navigate to server directory
+cd server
+
+# installing the server
+npm install
+
+# navigate to client directory
+cd ../client
+
+# installing the client
+npm install
+
+# Running the project
+npm start
 ```
 
 
