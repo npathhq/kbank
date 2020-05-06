@@ -14,7 +14,9 @@
 
 ## 🎯 Introduction
 
-Many parents give their children an allowance. Some parents give weekly or monthly allowance for free. Or, if they make their children do chores to earn allowance, they sometimes lose track of what’s been completed and how much the children earned. With KBank (kids bank), parents can add available chores. Parents will set the allowance reward for each one. The children will look at the list and choose which ones they want to do. If the children completes the chore, the reward will be added to their total rewards that can be claimed later. KBank application is a win-win for both parents and children! Children can earn an allowance and parents can manage their allowance.
+Many parents give their children an allowance. Some parents give weekly or monthly allowance for free. Or, if they make their children do chores to earn allowance, they sometimes lose track of what’s been completed and how much the children earned. With KBank (kids bank), parents can add available chores. Parents will set the allowance reward for each one.
+
+The children will look at the list and choose which ones they want to do. If the children completes the chore, the reward will be added to their total rewards that can be claimed later. KBank application is a win-win for both parents and children! Children can earn an allowance and parents can manage their allowance.
 
 
 ## 📷 Screenshots
