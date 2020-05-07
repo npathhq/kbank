@@ -75,18 +75,4 @@ router.post('/login', validateLogin, async (req, res) => {
 });
 
 
-// router.post('/authenticate', (req, res) => {
-//   const authHeader = req.headers.authorization;
-//   const token = authHeader && authHeader.split(' ')[1];
-//   if (token == null) return res.sendStatus(401);
-
-//   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, id) => {
-//     if (err) return res.sendStatus(401);
-//     req.id = id;
-//     console.log('id:', id);
-//     res.sendStatus(200);
-//   });
-// });
-
-
 module.exports = router;

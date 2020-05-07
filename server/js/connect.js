@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
+  user: 'admin',
+  host: 'rds-postgresql-cmpe172.csadfhasdjwe5.us-east-1.amazonaws.com',
   database: 'kbank',
-  password: 'password',
+  password: 'password123',
   port: 5432,
 });
 
